@@ -48,7 +48,7 @@ def PSIFGnetGen(tims, rbperp, imgname=None, masteridx=None, plttit=None, xunit=N
 	if masteridx != None:	
 		for imgidx in range(len(tims)):
 			if imgidx != msid:
-				plt.plot([tims[imgidx], tims[masteridx]], [rbperp[imgidx], rbperp[masteridx]], '-k')
+				plt.plot([tims[imgidx], tims[masteridx]], [rbperp[imgidx], rbperp[masteridx]], '-', color = 'gray')
 
 	'''if mksz != None:
 		plt.scatter(tims, rbperp, marker = 'o', c = 'red', s = mksz)
