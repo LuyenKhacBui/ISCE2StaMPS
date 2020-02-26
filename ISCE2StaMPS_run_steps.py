@@ -15,6 +15,7 @@ import subprocess
 import glob
 
 appdir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+print(appdir)
 ##sys.path.append(appdir)
 sys.path.insert(0, appdir)
 

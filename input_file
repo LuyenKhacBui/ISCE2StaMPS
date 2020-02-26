@@ -1,0 +1,13 @@
+source_data		slc_stack
+slc_stack_path		/media/sf_Lap_trinh/Lap_trinh_Python/app/ISCE2StaMPS/merged/SLC
+slc_stack_master	UNKNOWN
+slc_stack_geom_path	/media/sf_Lap_trinh/Lap_trinh_Python/app/ISCE2StaMPS/merged/geom_master
+slc_stack_baseline_path	/media/sf_Lap_trinh/Lap_trinh_Python/app/ISCE2StaMPS/merged/baselines
+
+range_looks		40
+azimuth_looks		10
+aspect_ratio		4
+
+lambda			0.056
+slc_suffix		.full
+geom_suffix		.full

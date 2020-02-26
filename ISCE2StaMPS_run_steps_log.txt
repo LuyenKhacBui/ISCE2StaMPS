@@ -1,0 +1,27 @@
+2020-02-26 18:11:13,733 | INFO: ##########################################################################################################################
+2020-02-26 18:11:13,736 | INFO: #                                                                                                                        #
+2020-02-26 18:11:13,736 | INFO: #         This is the app. used to run steps listed in directory "run_files" in order to adapt ISCE to StaMPS            #
+2020-02-26 18:11:13,737 | INFO: #                                     (Script used: ISCE2StaMPS_run_steps.py)                                            #
+2020-02-26 18:11:13,737 | INFO: #                                                                                                                        #
+2020-02-26 18:11:13,738 | INFO: ##########################################################################################################################
+2020-02-26 18:11:13,761 | INFO: Steps being run is listed in the directory 'run_files'
+2020-02-26 18:11:13,762 | INFO: Number of run files: 0
+2020-02-26 18:11:13,763 | INFO: Logging/Report files of the above steps are saved in: 'run_files_reports' that should be carefully read to check if any error issued.
+2020-02-26 18:11:13,763 | INFO: Create 'input_file' used for running in the next step: 'make_single_master_stack_isce'
+2020-02-26 18:11:13,763 | INFO: 	slc_stack_path         : /media/sf_Lap_trinh/Lap_trinh_Python/app/ISCE2StaMPS/merged/SLC
+2020-02-26 18:11:13,764 | INFO: 	slc_stack_master       : UNKNOWN
+2020-02-26 18:11:13,764 | INFO: 	slc_stack_geom_path    : /media/sf_Lap_trinh/Lap_trinh_Python/app/ISCE2StaMPS/merged/geom_master
+2020-02-26 18:11:13,764 | INFO: 	slc_stack_baseline_path: /media/sf_Lap_trinh/Lap_trinh_Python/app/ISCE2StaMPS/merged/baselines
+2020-02-26 18:11:13,765 | INFO: 	range_looks            : 40
+2020-02-26 18:11:13,765 | INFO: 	azimuth_looks          : 10
+2020-02-26 18:11:13,765 | INFO: 	lambda                 : 0.056
+2020-02-26 18:11:13,766 | INFO: 	slc_suffix             : .full
+2020-02-26 18:11:13,766 | INFO: 	geo_suffix             : .full
+2020-02-26 18:11:13,769 | INFO: ==============================================
+2020-02-26 18:11:13,769 | INFO: ----------------------------------------------
+2020-02-26 18:11:13,769 | INFO: Prog. started at  : 2020-02-26 18:11:13.731704
+2020-02-26 18:11:13,769 | INFO: Prog. finished at : 2020-02-26 18:11:13.769130
+2020-02-26 18:11:13,770 | INFO: total running time: 0:00:00.037426
+2020-02-26 18:11:13,770 | INFO: Program finished !
+2020-02-26 18:11:13,770 | INFO: ----------------------------------------------
+2020-02-26 18:11:13,770 | INFO: ==============================================

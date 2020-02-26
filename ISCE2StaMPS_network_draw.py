@@ -171,6 +171,7 @@ if __name__ == '__main__':
 	ftsz = inputs.ftsz
 	mksz = inputs.mksz
 	msdt = inputs.msdt
+	msdt = "20180111"
 	if inputs.ofle != None:
 		imgfile = inputs.ofle
 	else:
