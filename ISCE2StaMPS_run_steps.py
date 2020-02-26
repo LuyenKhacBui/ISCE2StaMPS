@@ -6,7 +6,7 @@
 Parameters:
 		Input parameters
 Returns:
-		Output results
+		Output results: multi outputs
 '''
 
 import os, sys
