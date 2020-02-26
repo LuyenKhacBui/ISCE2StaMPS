@@ -3,9 +3,10 @@
 
 '''This is a script used to run steps listed in directory "run_files" in order to adapt ISCE to StaMPS.
 
-Parameters:	
-		
-Returns:	
+Parameters:
+		Input parameters
+Returns:
+		Output results
 '''
 
 import os, sys
