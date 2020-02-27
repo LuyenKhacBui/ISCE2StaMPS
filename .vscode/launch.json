@@ -10,7 +10,8 @@
             "request": "launch",
             "program": "${file}",
             "console": "integratedTerminal",
-            "cwd": "/media/sf_F_DRIVE/HANOI/InSAR_Sent/ISCE_StaMPS_20.8-21.3_105.5-106.0_20160403-20190915"            
+            "cwd": "/media/sf_F_DRIVE/HANOI/InSAR_Sent/ISCE_StaMPS_20.8-21.3_105.5-106.0_20160403-20190915",
+            //"args": ["-ma", "20180111"]
         }
     ]
 }

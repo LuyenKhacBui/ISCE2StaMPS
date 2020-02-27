@@ -80,10 +80,10 @@ def PSIFGnetGen(tims, rbperp, imgname=None, masteridx=None, plttit=None, xunit=N
 
 	if xunit == None:
 		#plt.xlabel('Time [year]')
-		plt.xlabel('Temporal Baseline [year]', fontsize = 14, color = 'r')
+		plt.xlabel('Acquisition Time [year]', fontsize = 14, color = 'r')
 	else:
 		#plt.xlabel('Time [' + xunit + ']', fontsize = 14, color = 'r')
-		plt.xlabel('Temporal Baseline [' + xunit + ']', fontsize = 14, color = 'r')
+		plt.xlabel('Acquisition Time [' + xunit + ']', fontsize = 14, color = 'r')
 	
 	if yunit == None:
 		#plt.ylabel('Perpendicular Baseline [m]')		
@@ -171,7 +171,7 @@ if __name__ == '__main__':
 	ftsz = inputs.ftsz
 	mksz = inputs.mksz
 	msdt = inputs.msdt
-	msdt = "20180111"
+	
 	if inputs.ofle != None:
 		imgfile = inputs.ofle
 	else:
