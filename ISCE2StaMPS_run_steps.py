@@ -13,13 +13,53 @@ import os, sys
 import datetime
 import subprocess
 import glob
+import logging
 
 appdir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 print(appdir)
 ##sys.path.append(appdir)
 sys.path.insert(0, appdir)
 
-from modules.basictools import LoggingGen
+#from modules.basictools import LoggingGen
+
+def LoggingGen(logfile):
+	'''	A fn. used to generate logging appended to a file (i.e., "logfile")		
+		parameters:	logfile    : a file used to log infor.
+	'''
+
+	#######################
+	##### CREATE A LOG FILE
+
+	logger = logging.getLogger('mylog')
+	logger.setLevel(logging.DEBUG)
+
+	# create file handler which logs even debug messages
+	fh = logging.FileHandler(logfile, mode = 'w')
+	fh.setLevel(logging.DEBUG)
+
+	# create console handler with a higher log level
+	ch = logging.StreamHandler()
+	ch.setLevel(logging.ERROR)
+
+	# create formatter and add it to the handlers
+	#formatter = logging.Formatter('%(asctime)s | %(name)s | %(levelname)s: %(message)s')
+	formatter = logging.Formatter('%(asctime)s | %(levelname)s: %(message)s')
+
+	ch.setFormatter(formatter)
+	fh.setFormatter(formatter)
+
+	# add handlers to logger
+	logger.addHandler(ch)
+	logger.addHandler(fh)
+
+	# logging examples
+	#logger.debug('debug message')
+	#logger.info('info message')
+	#logger.warn('warn message')
+	#logger.error('error message')
+	#logger.critical('critical message')
+
+	return logger
 
 
 sttm = datetime.datetime.now()		# Luyen cmt: start time running for all prog.

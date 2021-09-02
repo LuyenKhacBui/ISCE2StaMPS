@@ -20,7 +20,7 @@ from os.path import dirname as dirname
 from os.path import abspath as abspath
 appdir = dirname(dirname(abspath(__file__)))
 sys.path.insert(0, appdir)
-from modules.geotools import DecimalYearComp as decyrcomp
+#from modules.geotools import DecimalYearComp as decyrcomp
 '''import subprocess
 import glob
 
@@ -41,6 +41,14 @@ def cmdLineParse():
 	#	sys.exit(0)    
     
 	return inputs
+
+def decyrcomp(year, month, day):	# This tool is used to calc. decimal year from year, month, date inputed	
+	fn_noofdays = (date(year, month, day) - date(year, 1, 1)).days
+	fn_daysofyear = (date(year + 1, month, day) - date(year, month, day)).days
+	fn_decimal_year = year + float(fn_noofdays)/float(fn_daysofyear)	# This "float" fn. is used so that 
+																		# the result of fn_noofdays/fn_daysofyear will be in
+																		# double (float) format instead of integer
+	return fn_decimal_year
 	
 
 def PSIFGnetGen(tims, rbperp, imgname=None, masteridx=None, plttit=None, xunit=None, yunit=None, imshow=True, fname=None, figdpi = 1000, ftsz=None, mksz=None):
@@ -79,17 +87,20 @@ def PSIFGnetGen(tims, rbperp, imgname=None, masteridx=None, plttit=None, xunit=N
 		plt.title(plttit)
 
 	if xunit == None:
+		plt.xlabel('Acquisition Time [year]', fontsize = 14, color = 'k')
 		#plt.xlabel('Time [year]')
-		plt.xlabel('Acquisition Time [year]', fontsize = 14, color = 'r')
+		#plt.xlabel('Acquisition Time [year]', fontsize = 14, color = 'r')
 	else:
+		plt.xlabel('Acquisition Time [' + xunit + ']', fontsize = 14, color = 'k')
 		#plt.xlabel('Time [' + xunit + ']', fontsize = 14, color = 'r')
-		plt.xlabel('Acquisition Time [' + xunit + ']', fontsize = 14, color = 'r')
+		#plt.xlabel('Acquisition Time [' + xunit + ']', fontsize = 14, color = 'r')
 	
 	if yunit == None:
-		#plt.ylabel('Perpendicular Baseline [m]')		
-		plt.ylabel('Perpendicular Baseline [m]', fontsize = 14, color = 'b')
+		plt.ylabel('Perpendicular Baseline [m]', fontsize = 14, color = 'k')
+		#plt.ylabel('Perpendicular Baseline [m]', fontsize = 14, color = 'b')
 	else:
-		plt.ylabel('Perpendicular Baseline [' + yunit + ']', fontsize = 14, color = 'b')
+		plt.ylabel('Perpendicular Baseline [' + yunit + ']', fontsize = 14, color = 'k')
+		#plt.ylabel('Perpendicular Baseline [' + yunit + ']', fontsize = 14, color = 'b')
 		
 		
 	plt.grid()
@@ -223,9 +234,9 @@ if __name__ == '__main__':
 		sys.exit()
 	
 	if msdt != None:
-		PSIFGnetGen(rbtemp, rbperp, imgname=imgs, masteridx=msid, plttit=None, xunit='years', yunit='m', imshow=True, fname=imgfile, figdpi = 1000, ftsz = ftsz, mksz = mksz)
+		PSIFGnetGen(rbtemp, rbperp, imgname=imgs, masteridx=msid, plttit=None, xunit='year', yunit='m', imshow=True, fname=imgfile, figdpi = 1000, ftsz = ftsz, mksz = mksz)
 	else:
-		PSIFGnetGen(rbtemp, rbperp, imgs, masteridx=None, plttit=None, xunit='days', yunit='meters', imshow=True, fname=imgfile, figdpi = 1000, ftsz = ftsz, mksz = mksz)		
+		PSIFGnetGen(rbtemp, rbperp, imgs, masteridx=None, plttit=None, xunit='day', yunit='meter', imshow=True, fname=imgfile, figdpi = 1000, ftsz = ftsz, mksz = mksz)		
 	#IFGnetGen(tims, rbperp, imgname=None, plttit=None, xunit=None, yunit=None, imshow=True, fname=None, figdpi = 1000):	
 	
 	print ('\r\nInSAR network has been generated and saved in: ' + abspath(imgfile))
